@@ -190,7 +190,7 @@ jobs:
           ls -Ahl
       
       - name: Upload artifact
-        uses: actions/upload-artifact@OpenWrt21.02-R4S
+        uses: actions/upload-artifact@main
         if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
         with:
           name: OpenWRT_21.02
