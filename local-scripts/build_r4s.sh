@@ -42,7 +42,11 @@ echo -n "Step 05...\n------------------------------"
 echo -n "Step 06...\n------------------------------"
 cat ./steps/06-create_config_from_seed.sh|sed -r 's/ao.seed/weikai.seed/'|bash
 
-#cd $BUILDDIR/openwrt
-#make -j 12
+if [ "$1" != 'setup-only' ]; then
+
+cd $BUILDDIR/openwrt
+make -j $(nproc)
+
+fi
 
 
