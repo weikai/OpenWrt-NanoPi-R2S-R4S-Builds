@@ -40,7 +40,7 @@ echo -n "Step 05...\n------------------------------"
 ./steps/05-create_luci_acl.sh
 
 echo -n "Step 06...\n------------------------------"
-cat ./steps/06-create_config_from_seed.sh|sed -r 's/ao.seed/weikai.seed/'|bash
+./steps/06-create_custom_config_from_seed.sh
 
 if [ "$1" != 'setup-only' ]; then
 
